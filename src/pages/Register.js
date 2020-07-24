@@ -31,7 +31,7 @@ class Register extends Component {
     console.log(JSON.stringify(payload));
     let response = await api.post("/register", payload);
     console.log(JSON.stringify(response));
-    if (response.statusCode === "2000") {
+    if (response.data.statusCode === 2000) {
         this.setState({loginVisible: true})
     }
   }
@@ -91,6 +91,7 @@ class Register extends Component {
               ></input>
             </div>
           </div>
+          <div className="mb-3">
           <Button
             variant="contained"
             color="primary"
@@ -99,9 +100,18 @@ class Register extends Component {
           >
             SIGN UP
           </Button>
+          </div>
+          <Button
+            variant="contained"
+            color="primary"
+            style={{ width: 500 }}
+            href="/login"
+          >
+            LOG IN
+          </Button>
         </div>
         {this.state.loginVisible && (
-        <Login/>
+         <Login/>
             )}
       </div>
       

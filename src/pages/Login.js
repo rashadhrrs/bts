@@ -20,7 +20,7 @@ class Login extends Component {
       },
       landingVisible: false,
     };
-    this.handleSave = this.handleSave.bind(this);
+    this.handleSave = this.handleLogin.bind(this);
   }
 
   async handleLogin(payload) {
