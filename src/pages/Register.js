@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { create } from "apisauce";
 import Login from 'pages/Login';
+import { Button } from "@material-ui/core";
 
 
 const api = create({
@@ -90,14 +91,14 @@ class Register extends Component {
               ></input>
             </div>
           </div>
-          <button
+          <Button
             variant="contained"
             color="primary"
             style={{ width: 500 }}
             onClick={() => this.handleSave(this.state.defaultPayload)}
           >
             SIGN UP
-          </button>
+          </Button>
         </div>
         {this.state.loginVisible && (
         <Login/>

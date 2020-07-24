@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Checkbox } from "@material-ui/core";
 import { create } from "apisauce";
 import LandingPages from 'pages/LandingPages';
+import { Button } from "@material-ui/core";
+
 
 
 const api = create({
@@ -80,14 +82,14 @@ class Login extends Component {
               LUPA KATA SANDI
             </span>
           </div>
-          <button
+          <Button
             variant="contained"
             color="primary"
             style={{ width: 500 }}
             onClick={() => this.handleSave(this.state.defaultPayload)}
           >
             LOG IN
-          </button>
+          </Button>
           <div className="mt-5">
             <p style={{ textAlign: "center" }}>
               BELUM MEMILIKI AKUN? <span style={{ color: "blue" }}>DAFTAR</span>
