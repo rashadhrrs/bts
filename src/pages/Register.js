@@ -29,8 +29,8 @@ class Register extends Component {
     };
     console.log(JSON.stringify(payload));
     let response = await api.post("/register", payload);
-    console.log(response);
-    if (response.data.statusCode === "2000") {
+    console.log(JSON.stringify(response));
+    if (response.statusCode === "2000") {
         this.setState({loginVisible: true})
     }
   }
